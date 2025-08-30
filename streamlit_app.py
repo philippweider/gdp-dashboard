@@ -13,7 +13,7 @@ with open(SETTINGS_FILE, "r") as f:
 
 
 st.set_page_config(
-    page_title=settings["general"]["cache_dir"] + "    " + ROOT_DIR,
+    page_title=f"{settings['general']['cache_dir']}    {ROOT_DIR}",
     page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
 )
 
