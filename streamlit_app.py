@@ -2,10 +2,18 @@ import streamlit as st
 import pandas as pd
 import math
 from pathlib import Path
+import yaml
 
 # Set the title and favicon that appear in the Browser's tab bar.
+from paths import ROOT_DIR, SETTINGS_FILE, CACHE_DIR, HISTORY_DIR, AUTH_DEVICES_FILE
+
+# Load settings yaml files
+with open(SETTINGS_FILE, "r") as f:
+    settings = yaml.safe_load(f)
+
+
 st.set_page_config(
-    page_title='GDP dashboard',
+    page_title=settings["general"]["cache_dir"],
     page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
 )
 
