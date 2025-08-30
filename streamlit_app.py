@@ -14,7 +14,7 @@ with open(SETTINGS_FILE, "r") as f:
 
 st.set_page_config(
     page_title="empyt",
-    #page_title=f"{settings['general']['cache_dir']}    {ROOT_DIR}",
+    page_title=f"{settings['general']['cache_dir']}    {ROOT_DIR}",
     page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
 )
 
@@ -73,7 +73,7 @@ gdp_df = get_gdp_data()
 
 # Set the title that appears at the top of the page.
 '''
-# :earth_americas: GDP dashboard
+# :earth_americas: "{settings['general']['cache_dir']}    {ROOT_DIR}"
 
 Browse GDP data from the [World Bank Open Data](https://data.worldbank.org/) website. As you'll
 notice, the data only goes to 2022 right now, and datapoints for certain years are often missing.
